@@ -1,7 +1,7 @@
 var VIM = VIM || {};
 
 
-VIM.canvasEngine = function () {
+VIM.canvasEngine = (function () {
   function saveRestore(func) {
     that.ctx.save();
     func(that.ctx);
@@ -27,7 +27,7 @@ VIM.canvasEngine = function () {
   };
 
   return that;
-}();
+})();
 
 
 
