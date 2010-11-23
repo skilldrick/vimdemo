@@ -25,3 +25,9 @@ publish
 
 # files
 build/buildinfo.properties
+
+# upload.py stuff
+.lastrun
+Makefile
+run.bat
+uploadsettings*
