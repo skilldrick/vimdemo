@@ -1,6 +1,13 @@
 var VIM = VIM || {};
 
-VIM.canvas = function () {
+
+VIM.canvasEngine = function () {
+  function saveRestore(func) {
+    that.ctx.save();
+    func(that.ctx);
+    that.ctx.restore();
+  }
+
   var that = {};
 
   that.init = function () {
@@ -8,17 +15,19 @@ VIM.canvas = function () {
     that.width = that.canvas.width;
     that.height = that.canvas.height;
     that.ctx = that.canvas.getContext('2d');
-    that.ctx.save();
-    that.ctx.fillStyle = 'black';
-    that.ctx.fillRect(0, 0, that.width, that.height);
-    that.ctx.restore();
-  }
+    
+    saveRestore(function (ctx) {
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, that.width, that.height);
+    });
+  };
+
+  that.write = function (args) {
+    console.log(args.line, args.text);
+  };
 
   return that;
 }();
 
-$(document).ready(function () {
-  VIM.canvas.init();
-});
 
 
