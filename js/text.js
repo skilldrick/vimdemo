@@ -7,14 +7,19 @@ VIM.textEngine = (function () {
 
   that.init = function () {
     VIM.canvasEngine.write(
-      { line: 1, text: 'Hi.' },
-      { line: 2, text: 'I mean, Hello, world' },
-      { line: 3, text: "Yeah, that's what I meant to say." },
-      { line: 4, text: "    * * * * * * *"},
-      { line: 5, text: "   * * * * * * *", indent: 1  },
-      { line: 6, text: "  * * * * * * *", indent: 2  },
-      { line: 7, text: " * * * * * * *", indent: 3  },
-      { line: 8, text: "* * * * * * *", indent: 4  }
+      { line: 1, text: " _|      _|  _|_|_|  _|      _|      _|_|_|    _|_|_|_|  _|      _|    _|_|    " },
+      { line: 2, text: " _|      _|    _|    _|_|  _|_|      _|    _|  _|        _|_|  _|_|  _|    _|  " },
+      { line: 3, text: " _|      _|    _|    _|  _|  _|      _|    _|  _|_|_|    _|  _|  _|  _|    _|  " },
+      { line: 4, text: "   _|  _|      _|    _|      _|      _|    _|  _|        _|      _|  _|    _|  " },
+      { line: 5, text: "     _|      _|_|_|  _|      _|      _|_|_|    _|_|_|_|  _|      _|    _|_|    " },
+      { line: 7,  text: "                         _" },
+      { line: 8,  text: "                        //" },
+      { line: 9,  text: "                       //" },
+      { line: 10,  text: "          /\\_/\\       //" },
+      { line: 11, text: "          (@.@ )_.-._//" },
+      { line: 12, text: "ejm97     > O < .-.  )" },
+      { line: 13, text: "              |/   |/" }
+
     );
   };
 
